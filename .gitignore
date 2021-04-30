@@ -1,0 +1,6 @@
+retailbank/venv
+venv
+
+*.pyc
+.vscode/settings.json
+retailbank/.vscode/settings.json

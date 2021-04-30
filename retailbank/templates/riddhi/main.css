@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  background-color: #fff;
+  width: 500px;
+  padding: 25px;
+  margin: 50px auto 0;
+  border-top: 5px solid #f5ba1a;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.input-name{
+  width: 90%;
+  position:relative;
+  margin: 20px auto;
+
+}
+
+
+.container{
+  border-radius: 0.5px;
+}
+
+input{
+  width: 50%;
+}
+
+body{
+  background-color: lightgray;
+}
+text{
+  color: red;
+}
+
+@media(max-width:480px) {
+  .wrapper{
+    width: 100%;
+  }
+  .input-name{
+    margin-bottom: -10px;
+  }
+}

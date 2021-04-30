@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Registration</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+var citiesByState = {
+Odisha: ["Bhubaneswar","Puri","Cuttack"],
+Maharashtra: ["Mumbai","Pune","Nagpur"],
+Kerala: ["kochi","Kanpur"]
+
+}
+function makeSubmenu(value) {
+if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+else {
+var citiesOptions = "";
+for(cityId in citiesByState[value]) {
+citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+}
+document.getElementById("citySelect").innerHTML = citiesOptions;
+}
+}
+function displaySelected() { var country = document.getElementById("countrySelect").value;
+var city = document.getElementById("citySelect").value;
+alert(country+"\n"+city);
+}
+function resetSelection() {
+document.getElementById("countrySelect").selectedIndex = 0;
+document.getElementById("citySelect").selectedIndex = 0;
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+  <div class="container wrapper"><br>
+    <h1 class=" text-center"> Create Customer</h1>
+    <br>
+    <div class="col-lg-8 m-auto d-block form-container">
+      <form action="#" onsubmit="return validation()" class="bg-light">
+        <div class="form-group input-name">
+          <label class="text-center">Customer SSN ID <text>*</text></label>
+          <input type="text" name="user" class="form-control" id="user">
+        </div>
+
+        <div class="form-group input-name">
+
+          <label class="text-center">Customer Name<text>*</text></label>
+          <input type="text" name="user" class="form-control" id="name">
+        </div>
+
+        <div class="form-group input-name">
+          <label class="text-center">Age <text>*</text></label>
+          <input type="number" name="user" class="form-control" id="age">
+        </div>
+
+        <div class="form-group input-name">
+          <label class="text-center">Address <text>*</text></label>
+          <input type="text" name="user" class="form-control" id="add">
+        </div>
+
+        <div class="form-group input-name">
+          <label class="text-center">State<text>*</text></label>
+
+          <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+            <option value="" disabled selected>Choose State</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Andhra Pradesh</option>
+            <option>Gujrat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland </option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttarakhand</option>
+            <option>Uttar Pradesh</option>
+            <option>West Bangal</option>
+
+          </select>
+          <br>
+        </div>
+        <div class="form-group input-name">
+          <label class="text-center">City<text>*</text></label>
+          <select id="citySelect" size="1" >
+            <option value="" disabled selected>Choose City</option>
+            <option></option>
+          </select>
+        </div>
+        <text> (* fields are compulsory)</text>
+        <br>
+        <br>
+
+        <input type="submit" name="submit" value="Submit" class="btn-info ">
+
+
+
+
+
+
+
+      </form>
+
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
